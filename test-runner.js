@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 let tempExpected = 0;
 let tempPassed = 0;
 const onlyTests = [];
@@ -50,13 +49,11 @@ const TT = {
   only: {
     it(title, testFunc) {
       onlyTests.push(title);
-      // eslint-disable-next-line no-use-before-define
       const parentRunner = getRunnerById(this.parent);
       parentRunner.tests.push(parentRunner.createTest(title, testFunc));
     },
     spec(title, func) {
       onlySpecs.push(title);
-      // eslint-disable-next-line no-use-before-define
       const parentRunner = getRunnerById(this.parent);
       parentRunner.specs.push(parentRunner.createSpec(title, func));
     },
@@ -85,7 +82,6 @@ const TT = {
   createSpec(specTitle, setupTestsFunc) {
     return () => {
       if (specCanRun(specTitle)) {
-        // eslint-disable-next-line no-use-before-define
         const tt = newRunner({ specTitle });
         setupTestsFunc(tt);
         tt.runAllTests();
