@@ -24,7 +24,7 @@ function onCalculateButtonClick() {
     return;
   }
   if (hasExactlyTwoOperands(operation) === false) {
-    displayMessage('Sorry, only 2 operands are allowed');
+    displayMessage('Sorry, only 2 operands separated with spaces are allowed');
     return;
   }
   const result = mathOperationCalculationFromString(operation);
