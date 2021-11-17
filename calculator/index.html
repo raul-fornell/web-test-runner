@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator for testing purposes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <fieldset>
+        <legend>Simple calculator</legend>
+        <input id="operation" type="text" placeholder="For example 2 x 4" />
+        <button id="calcButton">Calculate</button>
+        <div id="result"></div>
+    </fieldset>
+    <script type="module" src="calculator.ui.js"></script>
+    <script type="module" src="calculator.tests.js"></script>
+    <script type="module" src="validation.tests.js"></script>
+    <script type="module" src="../test-runner-init.js"></script>
+</body>
+
+</html>
